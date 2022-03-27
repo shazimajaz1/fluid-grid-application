@@ -1,0 +1,54 @@
+<!-- Fluid Grid Application -->
+<!-- Developer: Shazim Ajaz -->
+<!-- Date: 03/16/2022 -->
+<!-- Tested On Browsers: Chrome -->
+<!-- External Library Count: 0 -->
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- Application Title -->
+        <title>Fluid Grid Application</title>
+
+        <!-- Load Stylesheet File -->
+        <link rel="stylesheet" href="./styles.css" type="text/css" />
+    </head>
+
+    <body>
+        <div class="root">
+            <div class="fluid-grid">
+                <!-- Column Selection Dropdown -->
+                <div class="column-select">
+                    <!-- Dropdown -->
+                    <select id="column-number-select" class="dropdown"></select>
+
+                    <!-- Create / Reset Button -->
+                    <button id="create-grid-button" class="create-reset-button">Create Grid</button>
+
+                    <!-- Add Box -->
+                    <button id="add-box-button" class="add-box-button">Add box</button>
+                </div>
+
+                <!-- Grid -->
+                <div id="grid-size" class="size">Select columns to continue!</div>
+                <div class="grid-wrapper">
+                    <div id="grid" class="grid">
+                        <!-- Define a box pseudo element with empty placeholder. Only show using javascript -->
+                        <div class="box a-shadow" style="display: none">
+                            <!-- Box Label -->
+                            <div class="box-label"></div>
+
+                            <!-- Remove Button -->
+                            <div class="close-button-wrapper">
+                                <div id="close-button" class="close-button">+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load Script File -->
+        <script type="module" src="./main.js"></script>
+    </body>
+</html>

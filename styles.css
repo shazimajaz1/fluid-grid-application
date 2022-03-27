@@ -1,0 +1,134 @@
+@import url("./variables.css");
+@import url("./shared-styles.css");
+
+/* Top Level Styles - HTML and Body Tag Should Cover the Entire Page */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 0;
+}
+
+.root {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 20px;
+    background-color: white;
+}
+
+.root > .fluid-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.root > .fluid-grid > .column-select {
+    display: flex;
+    flex-direction: row;
+}
+
+.column-select > .dropdown {
+    padding: var(--default-item-padding);
+    border: var(--default-item-border);
+    border-radius: var(--default-item-border-raidus);
+    background-color: var(--color-neutral);
+    min-width: 150px;
+    outline: none;
+}
+
+.column-select > .create-reset-button {
+    padding: var(--default-item-padding);
+    margin-left: var(--default-left-margin);
+    border: var(--default-item-border);
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: var(--default-item-border-raidus);
+}
+
+.column-select > .create-reset-button:hover {
+    cursor: pointer;
+    background-color: var(--color-secondary);
+}
+
+.column-select > .add-box-button {
+    margin-left: var(--default-left-margin);
+    background-color: white;
+    border: thin solid var(--color-primary);
+    border-radius: var(--default-item-border-raidus);
+    cursor: pointer;
+}
+
+.column-select > .add-box-button:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.fluid-grid {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.fluid-grid > .size {
+    margin-top: var(--default-margin-top);
+    font-weight: bold;
+    text-align: center;
+    color: var(--color-secondary);
+}
+
+.fluid-grid > .grid-wrapper {
+    border-radius: var(--default-item-border-raidus);
+    margin-top: var(--default-margin-top);
+    border: thin solid var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+.fluid-grid > .grid-wrapper > .grid {
+    display: none;
+    gap: 1em;
+}
+
+.fluid-grid > .grid-wrapper > .grid > .box {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    flex-direction: row;
+}
+
+.fluid-grid > .grid-wrapper > .grid > .box > .close-button-wrapper {
+    display: flex;
+    border: thin solid orange;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.fluid-grid > .grid-wrapper > .grid > .box > .close-button-wrapper > .close-button {
+    display: flex;
+    align-self: flex-end;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    cursor: pointer;
+    font-weight: bold;
+    color: red;
+
+    /* Disable text selection */
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.fluid-grid > .grid-wrapper > .grid > .box > .box-label {
+    display: flex;
+    flex-grow: 1;
+}

@@ -1,0 +1,12 @@
+:root {
+    --default-left-margin:10px;
+    --default-item-border: thin solid var(--color-primary);
+    --default-item-border-raidus: 4px;
+    --default-item-padding: 10px;
+    --default-item-background-color: whitesmoke;
+    --default-margin-top: 10px;
+
+    --color-primary: rgb(15, 134, 252);
+    --color-secondary: rgb(238, 155, 0);
+    --color-neutral: whitesmoke;
+}
